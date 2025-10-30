@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="id1"></p>
+    <script>
+        var no = parseInt(prompt('Enter a number:'));
+        if (no % 2 == 0) {
+            document.getElementById("id1").innerHTML = no + " is even number";
+        }
+        else {
+            document.getElementById("id1").innerHTML = no + " is odd number";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        var cars = { "name": "ford", "price": 69 }
+        document.getElementById("demo").innerHTML = cars; //[object Object]
+        document.getElementById("demo").innerHTML = cars.name + "price" + cars.price;
+        document.getElementById("demo").innerHTML = cars["name"] + " : " + cars["price"];
+        for (var key in cars) {
+            document.write("<br>" + key + " : " + cars[key]);
+        }
+        //</script>
+</body>
+
+</html>

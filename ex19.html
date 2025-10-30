@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .tabform {
+            overflow: hidden;
+            border: 2px solid #ccc;
+            background-color: #f1f1f1;
+
+        }
+
+        .tabform button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        .tabform button:hover {
+            background-color: #ddd;
+        }
+
+        .tabform button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 2px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabform">
+        <button class="tablink" onclick="openform(event,'Employee')">Employee</button>
+        <button class="tablink" onclick="openform(event,'Signup')">Signup</button>
+        <button class="tablink" onclick="openform(event,'Signin')">Signin</button>
+    </div>
+    <div id="Employee" class="tabcontent">
+        <h3>Complain Form</h3>
+        <input type="text" placeholder="Enter Employee name"><br><br>
+        <button type="button">complain</button>
+    </div>
+    <div id="Signup" class="tabcontent">
+        <h3>Sign Up form</h3>
+        <input type="text" placeholder="User name"><br>
+        <input type="password" placeholder="Password"><br>
+        <input type="text" placeholder="Designation"></input>
+        <button type="button">Sign Up</button>
+    </div>
+    <div id="Signin" class="tabcontent">
+        <h3>Signin form</h3>
+        <input type="text" placeholder="User name"><br>
+        <input type="password" placeholder="Password"><br>
+        <button type="button">Sign in</button>
+    </div>
+    <script>
+        function openform(e, fname) {
+            var i, tabcontent, tablink;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablink = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablink.length; i++) {
+                tablink[i].className = tablink[i].className.replace("active", "");
+            }
+            document.getElementById(fname).style.display = "block";
+            e.currentTarget.className += "active";
+        }
+    </script>
+</body>
+
+</html>

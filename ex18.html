@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chkpass() {
+            var upwd = document.getElementById("upass").value;
+            var cpwd = document.getElementById("cpass").value;
+            if (upwd !== cpwd) {
+                document.getElementById("passerror").innerText = "Password and Confirm Password do not match";
+                document.getElementById("upass").value = "";
+                document.getElementById("cpass").value = "";
+            }
+            else {
+                document.getElementById("passerror").innerText = "";
+                alert("Registration Successful");
+            }
+        }
+
+    </script>
+
+
+<body>
+    <form action="" method="post">
+        <table border="0" cellpadding="5" cellspacing="5" align="center">
+            <tr>
+                <td>user name</td>
+                <td><input type="text" id="uname" placeholder="Enter username"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="password" id="upass" placeholder="Enter password"></td>
+            </tr>
+            <tr>
+                <td>confirm password</td>
+                <td><input type="password" id="cpass" placeholder="Re-enter password"></td>
+                <td><span id="passerror" style="color:red;"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" align="center" onclick="chkpass();">Register
+                </td>
+            </tr>
+        </table>
+
+
+</body>
+
+</html>

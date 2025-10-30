@@ -1,0 +1,38 @@
+operator-it is used to perform any task between more than two operands.
+
+type of operator
+
+1.Airthmatic operator(+,-,*,/,%)
+a=20 b=3
+//a=b+c;  ans=23
+//a=b-c;  ans=17
+//a=b*c;  ans=60
+//a=b/c; ans=6 
+//a=b%c; ans=2
+
+
+2.Assignment operator
+
+(+=,-=,*=,/=,%=,=)
+
+3.logical operator
+
+(AND,OR,NOT)
+(&&,||,!)
+
+4.shift operator
+(left shift, right shift)
+(>>,<<)
+
+
+5.comparison operator
+
+(>,<,>=,<=,==,!=)
+
+
+6. increament or decreament
+(++,--)
+
+7.bitwise AND(&)
+8.Bitwise OR(|)
+9.Bitwise XOR(^)
